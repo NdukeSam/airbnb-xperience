@@ -1,23 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import Nav from "./components/Nav"
+import Hero from "./components/Hero"
+import Card from "./components/Card"
+import cardImg from "./images/katie.png"
+import star from "./images/Star 1.png"
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Hero />
+      
+      <div 
+      style = {{display: "flex", gap: "13px"}}>
+      <Card 
+      img = {cardImg}
+      rating = {5.0}
+      star = {star}
+      reviewCount = {6}
+      country = "USA"
+      title = "Life Lessons with Katie Zaferes"
+      currency = "$"
+      price = {136}
+      bgColor = "blue"
+      />
+
+      <Card 
+      img = {cardImg}
+      rating = {5.0}
+      star = {star}
+      reviewCount = {6}
+      country = "USA"
+      title = "Life Lessons with Katie Zaferes"
+      currency = "$"
+      price = {136}
+      bgColor = "red"
+
+      />
+      </div>
+
+
     </div>
   );
 }
